@@ -2,19 +2,19 @@ const express = require ('express')
 const router = express.Router()
 
 router.get ('/', (req, res) => {
-    res.send('hello from houses')
+    res.render('houses/list')
 })
 
 router.get ('/create', (req, res) => {
-    res.send('hello from create')
+    res.render('houses/create')
 })
 
 router.get ('/:id', (req, res) => {
-    res.send('hello from Id')
+    res.render('houses/one')
 })
 
 router.get ('/:id/edit', (req, res) => {
-    res.send('hello from Id edit')
+    res.render('houses/edit')
 })
 
 router.post('/', (req, res) => {

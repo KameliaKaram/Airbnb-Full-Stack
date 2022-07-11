@@ -1,0 +1,57 @@
+img {
+    width: 100px;
+}
+.card-title a{
+    color: black;
+    text-decoration: none;
+}
+
+.bigpic{
+    width: 500px;
+}
+
+.smallpic {
+    width: 130px;
+    padding: 0;
+}
+
+.form-label {
+    margin-bottom: 0px;
+}
+.pp {
+    width: 45px;
+}
+
+.bg {
+    height: 100vh;
+    background-image: url("https://res.cloudinary.com/dsko6ntfj/image/upload/v1642399115/portal/web%20development%20beginners/05%20Project%20Airbnb/assets/thailand.jpg"
+    );
+    background-size: cover;
+}
+
+/* .card-img-top {
+    width: 100px;
+} */
+ul {
+    list-style-type: none;
+}
+
+.thup {
+    color: green;
+}
+
+.thdown {
+    color: red;
+}
+.tiny {
+    width: 20px;
+}
+.rev {
+    padding: 0;
+}
+.sp {
+    padding: 0;
+}
+.pc {
+    padding: 0;
+}

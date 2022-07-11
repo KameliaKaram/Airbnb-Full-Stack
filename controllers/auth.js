@@ -1,24 +1,20 @@
 const express = require ('express')
 const router = express.Router()
 
-router.get ('/', (req, res) => {
-res.send('hello from auth')
-})
-
 router.get('/login', (req, res) => {
-    res.send('hello from login')
+    res.render('login')
 })
 
 router.get('/signup', (req, res) => {
-    res.send('hello from signup')
+    res.render('signup')
 })
 
 router.post('/login', (req, res) => {
-    res.send('hello from login')
+    res.render('login')
 })
 
 router.post('/signup', (req, res) => {
-    res.send('hello from signup')
+    res.render('signup')
 })
 
 router.get('/logout', (req, res) => {

@@ -2,11 +2,11 @@ const express = require ('express')
 const router = express.Router()
 
 router.get ('/', (req, res) => {
-    res.send('hello from profile')
+    res.render('profile')
 })
 
 router.patch ('/', (req, res) => {
-    res.send('hello from profile')
+    res.redirect('/profile')
 })
 
 module.exports = router

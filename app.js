@@ -45,17 +45,17 @@ mongoose.connect(
 require('./express-sessions')(app)
 
 // Routes
-app.get('/', (req, res) =>{})
+app.use('/',require ('./controllers/index'))
 
-app.get('/auth', (req, res) =>{})
+app.use('/auth', require ('./controllers/auth'))
 
-app.get('/bookings', (req, res) =>{})
+app.use('/bookings', require ('./controllers/bookings'))
 
-app.get('/houses', (req, res) =>{})
+ app.use('/houses', require('./controllers/houses'))
 
-app.get('/profile', (req, res) =>{})
+app.use('/profile', require('./controllers/profile'))
 
-app.get('/reviews', (req, res) =>{})
+app.use('/reviews', require('./controllers/reviews'))
 
 
 // Catch 404 and forward to error handler

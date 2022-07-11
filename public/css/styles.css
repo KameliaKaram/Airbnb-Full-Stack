@@ -29,9 +29,10 @@ img {
     background-size: cover;
 }
 
-/* .card-img-top {
-    width: 100px;
-} */
+.logo-signup {
+    display: block;
+}
+
 ul {
     list-style-type: none;
 }

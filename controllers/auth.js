@@ -14,19 +14,29 @@ router.post('/login', (req, res) => {
     res.render('login')
 })
 
-router.post('/signup', async(req, res) => {
-    console.log('aaaaa')
-    console.log(req.body)
-    let user = await Users.create(req.body)
-    req.login(user, (err) => {
-        if (err) {throw error}
+router.post('/signup', async(req, res, next) => {
+    //
+    let founduser= Users.findOne({
+        email: req.body.email
     })
-res.redirect('/houses')
+    try {
+        if (founduser) {
+            throw new Error('Account already exists')
+        } else {
+            let user = await Users.create(req.body)
+            req.login(user, (err) => {
+                if (err) {throw error}
+                res.redirect('/houses')
+            })
+        }
+    } catch (err) {
+        next (err)
+    } 
 })
 
 // router.get('/logout', (req, res) => {
 //     req.logout()
-//     // copy the logout stuff from portal
+//     // check logout code from portal
 // })
 
 module.exports = router

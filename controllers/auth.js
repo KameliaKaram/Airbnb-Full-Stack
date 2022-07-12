@@ -10,8 +10,25 @@ router.get('/signup', (req, res) => {
     res.render('signup')
 })
 
-router.post('/login', (req, res) => {
-    res.render('login')
+router.post('/login',async (req, res, next) => {
+    let foundaccount= await Users.findOne({
+        email: req.body.email,
+        password: req.body.password
+    })
+    try {
+        if (foundaccount) {
+            req.login(foundaccount, (err) => {
+                if (err) {
+                    throw error
+                }
+                res.redirect('/houses')
+            })
+        } else {
+            throw new Error ('Email or Password is wrong')
+        }
+    } catch (err) {
+        next (err)
+    }
 })
 
 router.post('/signup', async(req, res, next) => {
@@ -35,8 +52,7 @@ router.post('/signup', async(req, res, next) => {
 })
 
 // router.get('/logout', (req, res) => {
-//     req.logout()
-//     // check logout code from portal
+
 // })
 
 module.exports = router

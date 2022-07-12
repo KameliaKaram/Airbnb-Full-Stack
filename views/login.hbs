@@ -3,7 +3,7 @@
     class="card pt-5 position-absolute top-50 start-50 translate-middle"
     style="width: 20rem"
   >
-  <form>
+  <form action="/auth/login" method="POST" >
     <img
       src="/images/logo-airbnb.png"
       class="mx-auto logo-signup"
@@ -12,7 +12,7 @@
     <div class="card-body pt-5">
       
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
+          <label for="exampleInputEmail1" class="form-label" name="email"
             >Email address</label
           >
           <input
@@ -22,7 +22,7 @@
           />
         </div>
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
+          <label for="exampleInputEmail1" class="form-label" name="password"
             >Password</label
           >
           <input

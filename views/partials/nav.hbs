@@ -7,10 +7,12 @@
     </div>
     <div class="col text-end">
       <form>
-      <button type="button" class="btn btn-outline-secondary"><img src="https://randomuser.me/api/portraits/women/11.jpg" class="tiny rounded-circle" />Kimmy</button>
-      <button type="button" class="btn btn-outline-secondary">
-        Log Out
-      </button>
+        {{#if user}}
+          <button class="btn btn-outline-secondary"><img src="https://randomuser.me/api/portraits/women/11.jpg" class="tiny rounded-circle" />{{ user.name }}</button>
+          <button class="btn btn-outline-secondary">Log Out</button>
+        {{else}}
+          <button class="btn btn-outline-secondary">Log In</button>
+        {{/if}}
     </form>
     </div>
   </div>

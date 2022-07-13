@@ -4,30 +4,30 @@
 <div class="content">
   <div class="container mt-5">
     <h2>List A House</h2>
-    <form>
+    <form action="/houses" method="POST">
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Short Title</label
         >
-        <input type="email" class="form-control" />
+        <input name="title" type="text" class="form-control" />
       </div>
       <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"
           >Description</label
         >
-        <textarea class="form-control" rows="3"></textarea>
+        <textarea name="description" class="form-control" rows="3"></textarea>
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Number of Rooms</label
         >
-        <input type="number" class="form-control" />
+        <input name="rooms" type="number" class="form-control" />
       </div>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label"
           >Location</label
         >
-        <select class="form-select" aria-label="Default select example">
+        <select name="location" class="form-select" aria-label="Default select example">
           <option selected>Koh Samui</option>
           <option value="1">Koh Phangan</option>
           <option value="2">Bali</option>
@@ -37,7 +37,7 @@
       <label for="basic-url" class="form-label">Price (per Night)</label>
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon3">$</span>
-        <input
+        <input name="price"
           type="number"
           class="form-control"
           id="basic-url"

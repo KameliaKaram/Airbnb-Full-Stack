@@ -3,9 +3,42 @@ const router = express.Router()
 const Houses= require ('../models/houses')
 
 router.get ('/', async (req, res) => {
-    let houses= await Houses.find({})
+//location
+    // let q = {
+    //     location: req.query.location
+    // }
+    // if (req.query.location==undefined || req.query.location == "") {
+    //     delete q.location
+    // }
+// price
+    // let q = {
+    //     price: {
+    //         $lte: req.query.price
+    //     }
+    // }
+    // if (req.query.price ==undefined || req.query.price =="") {
+    //     delete q.price
+    // }
+//rooms
+    // let q = {
+    //     rooms: req.query.rooms
+    // }
+    // if (req.query.rooms== undefined || req.query.rooms =="") {
+    //     delete q.rooms
+    // }
+// searchbar
+    // let q = {
+    //     title: {$regex: req.query.searchterm, $options: 'i'}
+    // }
+    // if (req.query.searchterm == undefined || req.query.searchterm =="") {
+    //     delete q.title
+    // }
+
+    let houses= await Houses.find(q).sort('price')
+
     res.render('houses/list', {
-        user: req.user, houses
+        user: req.user, 
+        houses: houses
     })
 })
 

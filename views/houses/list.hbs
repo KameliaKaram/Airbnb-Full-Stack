@@ -3,18 +3,18 @@
 <!-- filter -->
 <div class="filter bg-light pt-2">
   <div class="container">
-    <form>
+    <form action="/houses" method="GET">
       <div class="row">
         <div class="col">
           <div class="input-group mb-3">
             <span class="input-group-text"
               ><i class="fa-solid fa-location-dot"></i
             ></span>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Any Location</option>
-              <option value="1">Koh Samui</option>
-              <option value="2">Koh Phangan</option>
-              <option value="3">Bali</option>
+            <select name="location" class="form-select" aria-label="Default select example">
+              <option selected value="">Any Location</option>
+              <option value="Koh Samui">Koh Samui</option>
+              <option value="Koh Phangan">Koh Phangan</option>
+              <option value="Bali">Bali</option>
             </select>
           </div>
         </div>
@@ -23,8 +23,8 @@
             <span class="input-group-text"
               ><i class="fa-solid fa-house-chimney"></i
             ></span>
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Any Rooms</option>
+            <select name="rooms" class="form-select" aria-label="Default select example">
+              <option selected value="">Any Rooms</option>
               <option value="1">1 Room</option>
               <option value="2">2 Rooms</option>
               <option value="3">3 Rooms</option>
@@ -36,7 +36,8 @@
         <div class="col">
           <div class="input-group mb-3">
             <span class="input-group-text">$</span>
-            <input
+            <input name="price"
+              value=""
               type="number"
               class="form-control"
               placeholder="max price"
@@ -55,7 +56,8 @@
           </div>
         </div>
         <div class="col">
-          <input
+          <input name="searchterm"
+            value=""
             type="text"
             class="form-control"
             placeholder="House name..."

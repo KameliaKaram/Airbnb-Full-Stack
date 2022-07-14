@@ -41,7 +41,7 @@ router.post('/', async (req, res, next) => {
     req.body.host=req.user._id
     let newhouse = await Houses.create(req.body)
         if (newhouse) {
-            res.redirect('/houses/:id')
+            res.redirect(`/houses/${newhouse._id}`)
         } else {
             throw new Error ('incorrect')
         }

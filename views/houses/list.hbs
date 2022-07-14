@@ -74,6 +74,7 @@
 <div class="cards pt-2">
   <div class="container">
     <div class="row row-cols-4 g-4 pt-2">
+      {{#each houses as |house|}}
       <div class="col">
         <div class="card" style="width: 16rem">
           <img
@@ -82,148 +83,21 @@
             alt="..."
           />
           <div class="card-body">
-            <small>Koh Samui 4 Rooms</small>
+            <small>{{house.location}} {{house.rooms}}Rooms</small>
             <h5 class="card-title">
-              <a href="">Luxury Villa In Chaweng</a>
+              <a href="">{{house.title}}</a> 
             </h5>
             <a href="#" class="stretched-link"></a>
             <div class="row">
               <div class="col">
                 <i class="thup fa-solid fa-thumbs-up"></i>3 Reviews
               </div>
-              <div class="col">$350/night</div>
+              <div class="col">${{house.price}}/night</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card" style="width: 16rem">
-          <img
-            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2002/house_02_01.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <small>Koh Phangan 3 Rooms</small>
-            <h5 class="card-title">
-              <a href="">Private Villa Lotus 1</a>
-            </h5>
-            <a href="#" class="stretched-link"></a>
-            <div class="row">
-              <div class="col">
-                <i class="thup fa-solid fa-thumbs-up"></i>1 Reviews
-              </div>
-              <div class="col">$150/night</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 16rem">
-          <img
-            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2003/house_03_01.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <small>Bali 3 Rooms</small>
-            <h5 class="card-title">
-              <a href="">Seminyak KuDeTa</a>
-            </h5>
-            <a href="#" class="stretched-link"></a>
-            <div class="row">
-              <div class="col">
-                <i class="thdown fa-solid fa-thumbs-down"></i>2 Reviews
-              </div>
-              <div class="col">$120/night</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 16rem">
-          <img
-            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2006/house_06_01.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <small>Bali 5 Rooms</small>
-            <h5 class="card-title">
-              <a href="">5 Bed Villa Canggu</a>
-            </h5>
-            <a href="#" class="stretched-link"></a>
-            <div class="row">
-              <div class="col">
-                <i class="thup fa-solid fa-thumbs-up"></i>1 Reviews
-              </div>
-              <div class="col">$250/night</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 16rem">
-          <img
-            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2004/house_04_01.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <small>Koh Phangan 2 Rooms</small>
-            <h5 class="card-title">
-              <a href="">Archie Village House</a>
-            </h5>
-            <a href="#" class="stretched-link"></a>
-            <div class="row">
-              <div class="col">
-                <i class="thup fa-solid fa-thumbs-up"></i>1 Reviews
-              </div>
-              <div class="col">$80/night</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 16rem">
-          <img
-            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2005/house_05_01.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <small>Koh Phangan 6 Rooms</small>
-            <h5 class="card-title">
-              <a href="">Luxury 6 Beds Villa</a>
-            </h5>
-            <a href="#" class="stretched-link"></a>
-            <div class="row">
-              <div class="col">0 Reviews</div>
-              <div class="col">$150/night</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card" style="width: 16rem">
-          <img
-            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2008/house_08_01.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <small>Koh Phangan 4 Rooms</small>
-            <h5 class="card-title">
-              <a href="">Narivana Koh Phangan</a>
-            </h5>
-            <a href="#" class="stretched-link"></a>
-            <div class="row">
-              <div class="col">0 Reviews</div>
-              <div class="col">$100/night</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {{/each}}
     </div>
   </div>
 </div>

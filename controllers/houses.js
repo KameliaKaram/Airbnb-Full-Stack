@@ -18,12 +18,10 @@ router.get ('/create', (req, res) => {
     }
 })
 
-// router.get ('/:id', (req, res) => {
-//     let x = Houses.findById()
-//     res.render('houses/one', {
-//         user: req.user
-//     })
-// })
+router.get ('/:id', async (req, res) => {
+    let house= await Houses.findById(req.params.id).populate('host')
+    res.render('houses/one', {user: req.user, house})
+})
 
 router.get ('/:id/edit', (req, res) => {
     if (req.isAuthenticated()) {
@@ -39,9 +37,9 @@ router.post('/', async (req, res, next) => {
     try {
         if (req.isAuthenticated()) {
     req.body.host=req.user._id
-    let newhouse = await Houses.create(req.body)
-        if (newhouse) {
-            res.redirect(`/houses/${newhouse._id}`)
+    let house = await Houses.create(req.body)
+        if (house) {
+            res.redirect(`/houses/${house._id}`)
         } else {
             throw new Error ('incorrect')
         }

@@ -2,9 +2,10 @@ const express = require ('express')
 const router = express.Router()
 const Houses= require ('../models/houses')
 
-router.get ('/', (req, res) => {
+router.get ('/', async (req, res) => {
+    let houses= await Houses.find({})
     res.render('houses/list', {
-        user: req.user
+        user: req.user, houses
     })
 })
 

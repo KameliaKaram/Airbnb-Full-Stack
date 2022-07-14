@@ -68,8 +68,8 @@
   <div class="row">
     <!-- Left -->
     <div class="col-8 pt-5 ">
-      <h1>Luxury Villa In Chaweng</h1>
-      <span><i class="fa-solid fa-location-dot"></i> Koh Samui 4 Rooms</span>
+      <h1>{{house.title}}</h1>
+      <span><i class="fa-solid fa-location-dot"></i>{{house.location}}{{house.rooms}}Rooms</span>
       <div class=" rev container mt-5 text-start">
         <div class="row">
           <div class="col-1">
@@ -79,7 +79,7 @@
           <span>Hosted by</span>
           <h6>Florian Klink</h6>
           </div>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla quidem, odit optio illo suscipit porro ut sint qui sit dolore quisquam voluptate facilis cupiditate autem expedita nostrum magnam vel! Asperiores libero officiis accusantium quos minima porro velit atque ullam eum. Expedita sint nam omnis totam voluptate veniam cumque natus tenetur!</p>
+          <p>{{house.description}}</p>
           <h2>0 Reviews</h2>
           <form>
             <label>Leave a Review</label>
@@ -99,7 +99,7 @@
     <div class="col-3 pt-5">
       <div class="card" style="width: 16rem;">
         <div class="cb card-body">
-          <h5 class="card-title">$350/night</h5>
+          <h5 class="card-title">${{house.price}}/night</h5>
           <small>0 Reviews</small>
           <form>
             <div class="mt-3">

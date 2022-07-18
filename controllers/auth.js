@@ -32,8 +32,7 @@ router.post('/login',async (req, res, next) => {
 })
 
 router.post('/signup', async(req, res, next) => {
-    //
-    let founduser= Users.findOne({
+    let founduser= await Users.findOne({
         email: req.body.email
     })
     try {

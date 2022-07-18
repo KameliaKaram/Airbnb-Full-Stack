@@ -9,9 +9,9 @@
       <form>
         {{#if user}}
           <button class="btn btn-outline-secondary"><img src="https://randomuser.me/api/portraits/women/11.jpg" class="tiny rounded-circle" />{{ user.name }}</button>
-          <button class="btn btn-outline-secondary">Log Out</button>
+          <a href="/auth/logout" class="btn btn-outline-secondary">Log Out</a>
         {{else}}
-          <button class="btn btn-outline-secondary">Log In</button>
+          <a href="/auth/login" class="btn btn-outline-secondary">Log In</a>
         {{/if}}
     </form>
     </div>
